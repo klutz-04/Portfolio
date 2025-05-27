@@ -19,15 +19,11 @@ const Experience = () => {
       location: 'Bengaluru, India',
       period: 'Sept 2023 to Apr 2024',
       summary: 'Led project management and data analysis initiatives, focusing on eDiscovery platforms and client deliverables.',
-      responsibilities: [
-        'Interfaced with internal and client stakeholders to gather business requirements, document workflows, and track deliverables using Agile methodologies.',
-        'Converted high-level business needs into actionable tasks; created and maintained documentation including STRs and project plans.',
-        'Supported systems integration and end-to-end project lifecycle for eDiscovery platforms with quality assurance processes.',
-        'Managed search queries, metadata indexing, and document production through platforms like Relativity and Excel.',
-        'Utilized Power BI to create interactive dashboards for tracking project metrics, task completion rates, and team productivity.',
-        'Performed document TIFFing/OCR and managed search queries, indexes, and Search Term Reports (STRs).',
-        'Leveraged JIRA to monitor progress, resolve issues, and maintain project traceability.',
-        'Provided client support with attention to details for hosted applications and contributed to processing documentation and internal communication.'
+      highlights: [
+        'Managed end-to-end project lifecycle for eDiscovery platforms using Agile methodologies',
+        'Created interactive Power BI dashboards for tracking project metrics and team productivity',
+        'Handled document processing, search queries, and metadata indexing through Relativity',
+        'Utilized JIRA for project tracking and maintained comprehensive documentation'
       ]
     },
     {
@@ -36,16 +32,11 @@ const Experience = () => {
       location: 'Bengaluru, India',
       period: 'May 2021 to Sept 2023',
       summary: 'Specialized in data operations and analysis, focusing on database management and visualization tools.',
-      responsibilities: [
-        'Collaborated with the Data Mapping team under the Data Operations division, leveraging Microsoft SQL Server, Microsoft Excel, Power BI to process and host third-party datasets into Consilio\'s internal databases.',
-        'Recognized as part of the "Best Team" during the Annual Consilio World Event for exceptional performance and collaboration.',
-        'Created Power BI dashboards to analyze dataset types and identify opportunities for acquiring additional relevant data.',
-        'Collaborated with cross-functional teams to process and map complex third-party datasets into internal databases using SQL and Excel.',
-        'Facilitated data ingestion, cleansing, load file generation, and validation to support high-volume eDiscovery and litigation support.',
-        'Facilitated seamless coordination between onsite and offshore teams to manage project deliverables and ensure timely, accurate data delivery in line with client requirements.',
-        'Developed and maintained Power BI dashboards to visualize project KPIs, workload distribution, and client deliverable timelines.',
-        'Managed data loading and administrative operations in Relativity and Sightline (Consilio\'s proprietary platform), including searches, workspace setup, TIFFing, and export functionalities.',
-        'Supported project managers by handling custom tasks aligned with business priorities, ensuring efficient data workflows and timely client deliverables.'
+      highlights: [
+        'Collaborated with Data Mapping team to process and host third-party datasets using SQL Server',
+        'Recognized as "Best Team" during Annual Consilio World Event for exceptional performance',
+        'Developed Power BI dashboards for dataset analysis and opportunity identification',
+        'Managed data loading operations in Relativity and Sightline platforms'
       ]
     }
   ];
@@ -69,99 +60,125 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className={`py-12 ${
+    <section id="experience" className={`py-20 ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="mb-8">
-          <h2 className={`text-2xl sm:text-3xl font-bold mb-6 ${
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* Education Section - Horizontal */}
+        <div className="mb-20">
+          <h2 className={`text-3xl font-bold mb-12 text-center ${
             darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
           }`}>
-            Work Experience
+            Education
           </h2>
-          <div className="space-y-8">
-            {experiences.map((exp, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {education.map((edu, index) => (
               <div 
                 key={index} 
-                className={`border-l-4 border-fuchsia-600 pl-4 ${
+                className={`p-6 rounded-lg ${
                   darkMode ? 'bg-gray-900' : 'bg-white'
-                } rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl`}
+                } shadow-lg transition-all duration-300 hover:shadow-xl`}
               >
-                <div 
-                  onClick={() => toggleJob(index)}
-                  className="cursor-pointer"
-                >
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-bold text-lg sm:text-xl mb-2">
-                        {exp.title} – {exp.company}
-                      </h3>
-                      <p className={`text-sm mb-4 ${
-                        darkMode ? 'text-gray-400' : 'text-gray-500'
-                      }`}>
-                        {exp.location} | {exp.period}
-                      </p>
-                    </div>
-                    <button 
-                      className={`p-2 rounded-full transition-transform duration-300 ${
-                        expandedJobs[index] ? 'rotate-180' : ''
-                      } ${
-                        darkMode ? 'text-fuchsia-400 hover:text-fuchsia-300' : 'text-fuchsia-600 hover:text-fuchsia-700'
-                      }`}
-                      aria-label={expandedJobs[index] ? 'Collapse details' : 'Expand details'}
-                    >
-                      <svg 
-                        className="w-6 h-6" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <p className={`text-base mb-4 ${
-                    darkMode ? 'text-gray-300' : 'text-gray-700'
-                  }`}>
-                    {exp.summary}
-                  </p>
-                </div>
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  expandedJobs[index] ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                <h3 className={`text-lg font-bold mb-2 ${
+                  darkMode ? 'text-fuchsia-400' : 'text-fuchsia-600'
                 }`}>
-                  <ul className={`list-disc list-inside space-y-2 text-sm sm:text-base mt-4 ${
-                    darkMode ? 'text-gray-300' : 'text-gray-700'
-                  }`}>
-                    {exp.responsibilities.map((item, idx) => (
-                      <li key={idx} className="leading-relaxed">{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                  {edu.degree}
+                </h3>
+                <p className={`${
+                  darkMode ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  {edu.institution}
+                </p>
+                <p className={`text-sm mt-2 ${
+                  darkMode ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {edu.date}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Work Experience Section - Expandable */}
         <div>
-          <h2 className={`text-2xl sm:text-3xl font-bold mb-6 ${
+          <h2 className={`text-3xl font-bold mb-12 text-center ${
             darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
           }`}>
-            Education
+            Work Experience
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {education.map((edu, index) => (
-              <div key={index} className={`p-4 rounded-lg ${
-                darkMode ? 'bg-gray-900' : 'bg-white'
-              } shadow-lg hover:shadow-xl transition-shadow duration-300`}>
-                <h3 className="font-semibold mb-2">{edu.degree}</h3>
-                <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                  {edu.institution} | {edu.date}
-                </p>
+          <div className="space-y-6">
+            {experiences.map((exp, index) => (
+              <div 
+                key={index} 
+                className={`p-6 rounded-lg ${
+                  darkMode ? 'bg-gray-900' : 'bg-white'
+                } shadow-lg transition-all duration-300 hover:shadow-xl`}
+              >
+                <div 
+                  className="flex flex-col md:flex-row md:items-center md:justify-between cursor-pointer"
+                  onClick={() => toggleJob(index)}
+                >
+                  <div className="flex-grow">
+                    <div className="flex items-center justify-between">
+                      <h3 className={`text-xl font-bold ${
+                        darkMode ? 'text-fuchsia-400' : 'text-fuchsia-600'
+                      }`}>
+                        {exp.title}
+                      </h3>
+                      <button 
+                        className={`p-2 rounded-full transition-transform duration-300 ${
+                          expandedJobs[index] ? 'rotate-180' : ''
+                        } ${
+                          darkMode ? 'text-fuchsia-400' : 'text-fuchsia-600'
+                        }`}
+                      >
+                        <svg 
+                          className="w-5 h-5" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <p className="text-lg font-medium mt-1">{exp.company}</p>
+                    <p className={`text-sm mt-1 ${
+                      darkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                      {exp.location} | {exp.period}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  expandedJobs[index] ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
+                }`}>
+                  <p className={`text-base mb-4 ${
+                    darkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>
+                    {exp.summary}
+                  </p>
+
+                  <div className="space-y-2">
+                    {exp.highlights.map((highlight, idx) => (
+                      <p 
+                        key={idx} 
+                        className={`text-sm flex items-start ${
+                          darkMode ? 'text-gray-400' : 'text-gray-600'
+                        }`}
+                      >
+                        <span className="mr-2">•</span>
+                        {highlight}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
