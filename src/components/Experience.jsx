@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 
 const Experience = () => {
   const { darkMode } = useTheme();
+  const [expandedJobs, setExpandedJobs] = useState({});
+
+  const toggleJob = (index) => {
+    setExpandedJobs(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const experiences = [
     {
       title: 'Associate Project Manager',
       company: 'Unitedlex',
       location: 'Bengaluru, India',
       period: 'Sept 2023 to Apr 2024',
+      summary: 'Led project management and data analysis initiatives, focusing on eDiscovery platforms and client deliverables.',
       responsibilities: [
         'Interfaced with internal and client stakeholders to gather business requirements, document workflows, and track deliverables using Agile methodologies.',
         'Converted high-level business needs into actionable tasks; created and maintained documentation including STRs and project plans.',
@@ -25,6 +35,7 @@ const Experience = () => {
       company: 'Consilio LLC',
       location: 'Bengaluru, India',
       period: 'May 2021 to Sept 2023',
+      summary: 'Specialized in data operations and analysis, focusing on database management and visualization tools.',
       responsibilities: [
         'Collaborated with the Data Mapping team under the Data Operations division, leveraging Microsoft SQL Server, Microsoft Excel, Power BI to process and host third-party datasets into Consilio\'s internal databases.',
         'Recognized as part of the "Best Team" during the Annual Consilio World Event for exceptional performance and collaboration.',
@@ -70,24 +81,67 @@ const Experience = () => {
           </h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className={`border-l-4 border-fuchsia-600 pl-4 ${
-                darkMode ? 'bg-gray-900' : 'bg-white'
-              } rounded-lg p-6 shadow-lg`}>
-                <h3 className="font-bold text-lg sm:text-xl mb-2">
-                  {exp.title} – {exp.company}
-                </h3>
-                <p className={`text-sm mb-4 ${
-                  darkMode ? 'text-gray-400' : 'text-gray-500'
+              <div 
+                key={index} 
+                className={`border-l-4 border-fuchsia-600 pl-4 ${
+                  darkMode ? 'bg-gray-900' : 'bg-white'
+                } rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl`}
+              >
+                <div 
+                  onClick={() => toggleJob(index)}
+                  className="cursor-pointer"
+                >
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="font-bold text-lg sm:text-xl mb-2">
+                        {exp.title} – {exp.company}
+                      </h3>
+                      <p className={`text-sm mb-4 ${
+                        darkMode ? 'text-gray-400' : 'text-gray-500'
+                      }`}>
+                        {exp.location} | {exp.period}
+                      </p>
+                    </div>
+                    <button 
+                      className={`p-2 rounded-full transition-transform duration-300 ${
+                        expandedJobs[index] ? 'rotate-180' : ''
+                      } ${
+                        darkMode ? 'text-fuchsia-400 hover:text-fuchsia-300' : 'text-fuchsia-600 hover:text-fuchsia-700'
+                      }`}
+                      aria-label={expandedJobs[index] ? 'Collapse details' : 'Expand details'}
+                    >
+                      <svg 
+                        className="w-6 h-6" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <p className={`text-base mb-4 ${
+                    darkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>
+                    {exp.summary}
+                  </p>
+                </div>
+                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  expandedJobs[index] ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                  {exp.location} | {exp.period}
-                </p>
-                <ul className={`list-disc list-inside space-y-2 text-sm sm:text-base ${
-                  darkMode ? 'text-gray-300' : 'text-gray-700'
-                }`}>
-                  {exp.responsibilities.map((item, idx) => (
-                    <li key={idx} className="leading-relaxed">{item}</li>
-                  ))}
-                </ul>
+                  <ul className={`list-disc list-inside space-y-2 text-sm sm:text-base mt-4 ${
+                    darkMode ? 'text-gray-300' : 'text-gray-700'
+                  }`}>
+                    {exp.responsibilities.map((item, idx) => (
+                      <li key={idx} className="leading-relaxed">{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -103,7 +157,7 @@ const Experience = () => {
             {education.map((edu, index) => (
               <div key={index} className={`p-4 rounded-lg ${
                 darkMode ? 'bg-gray-900' : 'bg-white'
-              } shadow-lg`}>
+              } shadow-lg hover:shadow-xl transition-shadow duration-300`}>
                 <h3 className="font-semibold mb-2">{edu.degree}</h3>
                 <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
                   {edu.institution} | {edu.date}

@@ -11,19 +11,26 @@ const Skills = () => {
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className={`text-2xl sm:text-3xl font-bold mb-8 text-center ${
-          darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
-        }`}>
-          Skills & Expertise
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {skillCategories.map((category, index) => (
-            <SkillCategory
-              key={index}
-              category={category.category}
-              skills={category.skills}
-            />
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <h2 className={`text-2xl sm:text-3xl font-bold mb-4 text-center ${
+            darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
+          }`}>
+            Skills & Expertise
+          </h2>
+          <p className={`text-center mb-8 ${
+            darkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
+            Click on each category to explore my technical and professional capabilities
+          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {skillCategories.map((category, index) => (
+              <SkillCategory
+                key={index}
+                category={category.category}
+                skills={category.skills}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
