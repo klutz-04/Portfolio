@@ -1,46 +1,58 @@
-# Sheethal Shivakumar - Portfolio
+# 🌟 Sheethal Shivakumar - Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
+Welcome to my personal portfolio! This website showcases my skills, projects, and professional journey.
 
-## 🌐 Live Site
+## 🔗 Live Site
 
-[Visit Portfolio](https://sheethal-shivakumar.vercel.app) _(Coming soon)_
+[Visit My Portfolio](https://react-portfolio-sheethu.vercel.app)
 
-## ✨ Features
+## 🎯 About Me
+
+Results-oriented Analyst/Project Manager with over two years of experience in data analysis, business process improvement, and project coordination. Currently advancing expertise in software development and databases through a Postgraduate Certificate program.
+
+## 💻 Technical Skills
+
+- **Programming Languages**: SQL, Python, JavaScript, React
+- **Data Analysis**: Excel, Power BI, Tableau
+- **Project Management**: JIRA, Agile methodologies
+- **Databases**: MySQL, PostgreSQL
+- **Tools & Technologies**: Git, GitHub, VS Code
+
+## 🛠️ Portfolio Features
 
 - **Responsive Design**: Mobile-first approach with seamless display across all devices
-- **Dark/Light Mode**: Theme toggle with system preference detection and localStorage persistence
-- **Smooth Navigation**: Animated scroll with section highlighting
+- **Dark/Light Mode**: Theme toggle with system preference detection
 - **Modern UI Components**:
   - Fixed header with backdrop blur
-  - Animated hamburger menu for mobile
-  - Floating scroll-to-top button
+  - Animated hamburger menu
+  - Smooth scroll navigation
   - Interactive project cards
-  - Social media links with icons
-  - Responsive image gallery
-  
-## 🛠️ Technologies
+  - Professional contact section
 
-- **Frontend Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: 
-  - Tailwind CSS
-  - CSS Modules
-  - Custom animations
+## 🚀 Built With
+
+- **Frontend**: React 18, Vite
+- **Styling**: Tailwind CSS
 - **State Management**: React Context
 - **Deployment**: Vercel
 - **Version Control**: Git & GitHub
 
-## 🚀 Development
+## 📱 Contact
+
+- **Email**: shivakumarsheethal@gmail.com
+- **LinkedIn**: [Sheethal Shivakumar](https://www.linkedin.com/in/sheethal-shivakumar/)
+- **Location**: Ontario, Canada
+
+## 🔧 Local Development
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sheethal-shivakumar/react-portfolio.git
+   git clone https://github.com/sheethal5shivakumar/React-Portfolio--Sheethu.git
    ```
 
 2. Install dependencies:
    ```bash
-   cd react-portfolio
+   cd React-Portfolio--Sheethu
    npm install
    ```
 
@@ -54,41 +66,6 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
    npm run build
    ```
 
-## 💫 Deployment
-
-This project is configured for seamless deployment on Vercel:
-
-1. Push your code to GitHub
-2. Connect your GitHub repository to Vercel
-3. Configure build settings:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-   - Install Command: `npm install`
-
-## 🎨 Design Decisions & Challenges
-
-- **Performance Optimization**:
-  - Lazy loading of images
-  - Component code splitting
-  - Optimized asset delivery
-  
-- **Accessibility**:
-  - ARIA labels
-  - Keyboard navigation
-  - Focus management
-  - Reduced motion support
-
-- **Responsive Design**:
-  - Mobile-first approach
-  - Flexible layouts
-  - Dynamic typography
-  - Optimized images
-
 ## 📝 License
 
 MIT © Sheethal Shivakumar
-
-## 🤝 Contact
-
-- LinkedIn: [Sheethal Shivakumar](https://www.linkedin.com/in/sheethal-shivakumar/)
-- Email: shivakumarsheethal@gmail.com
