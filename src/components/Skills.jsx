@@ -7,12 +7,12 @@ const Skills = () => {
   const { darkMode } = useTheme();
 
   return (
-    <section id="skills" className={`py-16 ${
+    <section id="skills" className={`py-16 md:py-20 lg:py-24 ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className={`text-2xl sm:text-3xl font-bold mb-4 text-center ${
+          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-center ${
             darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
           }`}>
             Skills & Expertise
