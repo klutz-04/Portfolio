@@ -9,7 +9,6 @@ const About = () => {
   const contactInfo = {
     name: "Sheethal Shivakumar",
     location: "Ontario, Canada",
-    phone: "416-831-9167",
     email: "shivakumarsheethal@gmail.com",
     linkedin: "https://www.linkedin.com/in/sheethal-shivakumar/",
     github: "https://github.com/sheethal5shivakumar"
@@ -57,26 +56,6 @@ const About = () => {
 
                 {/* Contact Icons */}
                 <div className="flex items-center justify-center md:justify-start gap-4">
-                  {/* Phone */}
-                  <a 
-                    href={`tel:${contactInfo.phone}`} 
-                    className={`p-2 rounded-full transition-all duration-300 group relative ${
-                      darkMode 
-                        ? 'bg-gray-800 hover:bg-gray-700 text-fuchsia-400' 
-                        : 'bg-gray-100 hover:bg-gray-200 text-fuchsia-600'
-                    }`}
-                    aria-label="Call me"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                    <span className={`absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
-                      darkMode ? 'bg-gray-700 text-white' : 'bg-white text-gray-800 shadow-md'
-                    }`}>
-                      {contactInfo.phone}
-                    </span>
-                  </a>
-
                   {/* Email */}
                   <a 
                     href={`mailto:${contactInfo.email}`} 
