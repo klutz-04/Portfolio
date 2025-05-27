@@ -22,9 +22,9 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Portfolio Website',
-    description: 'Personal portfolio website built with React and Tailwind CSS, featuring responsive design, dark mode support, and interactive project showcases. Implements modern web development practices and optimized performance.',
-    technologies: ['React', 'Tailwind CSS', 'JavaScript', 'Vite', 'Git'],
-    link: 'https://github.com/sheethal/portfolio'
+    title: 'Modern Portfolio Website',
+    description: 'Designed and developed a modern portfolio website using React and Tailwind CSS. Features include responsive design, dark/light mode with system preference detection, smooth navigation, animated UI components, and optimized performance. Implemented with modern development practices and deployed on Vercel.',
+    technologies: ['React', 'Tailwind CSS', 'Vite', 'Git', 'Vercel', 'Responsive Design'],
+    link: 'https://react-portfolio-sheethu.vercel.app'
   }
 ]; 
