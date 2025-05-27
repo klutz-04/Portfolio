@@ -69,12 +69,12 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className={`py-16 ${
+    <section id="experience" className={`py-12 ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
     }`}>
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="mb-12">
-          <h2 className={`text-2xl sm:text-3xl font-bold mb-8 ${
+        <div className="mb-8">
+          <h2 className={`text-2xl sm:text-3xl font-bold mb-6 ${
             darkMode ? 'text-fuchsia-400' : 'text-fuchsia-700'
           }`}>
             Work Experience

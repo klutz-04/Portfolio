@@ -100,7 +100,7 @@ const Projects = () => {
     <section 
       name="projects"
       id="projects" 
-      className={`min-h-screen pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-20 lg:pb-24
+      className={`min-h-screen pt-16 md:pt-20 lg:pt-24 pb-16 md:pb-20 lg:pb-24
         ${darkMode 
           ? 'bg-gray-900 text-white' 
           : 'bg-gray-50 text-gray-900'
