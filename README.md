@@ -97,24 +97,6 @@ Results-oriented Analyst/Project Manager with over two years of experience in da
 - **Deployment**: Vercel
 - **Version Control**: Git & GitHub
 
-## 🎨 UI/UX Features
-
-- **Animations & Transitions**:
-  - Smooth section transitions
-  - Hover effects on interactive elements
-  - Loading animations
-  - Expandable content sections
-- **Accessibility**:
-  - ARIA labels for all interactive elements
-  - Keyboard navigation support
-  - High contrast color schemes
-  - Screen reader friendly structure
-- **Performance**:
-  - Optimized image loading
-  - Lazy-loaded components
-  - Efficient state management
-  - Fast page transitions
-
 ## 🔨 Challenges & Solutions
 
 1. **Responsive Design Implementation**

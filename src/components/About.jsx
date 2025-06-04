@@ -7,11 +7,11 @@ const About = () => {
   const [showContact, setShowContact] = useState(false);
 
   const contactInfo = {
-    name: "Sheethal Shivakumar",
+    name: "Abhay Chandel",
     location: "Ontario, Canada",
-    email: "shivakumarsheethal@gmail.com",
-    linkedin: "https://www.linkedin.com/in/sheethal-shivakumar/",
-    github: "https://github.com/sheethal5shivakumar"
+    email: "abhaychandel123@gmail.com",
+    linkedin: "https://www.linkedin.com/in/abhay-chandel-b700001b0/",
+    github: "https://github.com/abhaychandel123"
   };
 
   return (
@@ -34,7 +34,7 @@ const About = () => {
             <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 relative rounded-full overflow-hidden border-4 border-fuchsia-500 shadow-lg">
               <img
                 src={profileImage}
-                alt="Sheethal Shivakumar"
+                  alt="Abhay Chandel"
                 className="w-full h-full object-cover"
               />
             </div>
